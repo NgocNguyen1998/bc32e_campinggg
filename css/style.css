@@ -1,0 +1,130 @@
+.body {
+    background-color: #faf4f2;
+    margin: 0;
+}
+
+.Header {
+    background-color: #f8e1db;
+    padding: 10px 30px 10px 30px;
+    /* cố định header */
+    position: fixed;
+    top: 0px;
+    left: opx;
+    width: 100%;
+    /* đè thẻ có position còn lại, z-index càng cao càng đè đc */
+    z-index: 10;
+}
+
+.Header .logo img {
+    width: 80px;
+}
+
+.Header .navbar {
+    margin-top: 10px;
+}
+
+.Header .navbar a {
+    /* /* text-decoration: underline/overline/line-through */
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 20px;
+    /* margin giong tinh chat voi pading, the inline chi day 2 ben. */
+
+}
+
+/* :hover re chuot se doi mau */
+.Header .navbar a:hover {
+    color: red;
+}
+
+.Carousel {
+    background-image: url(../img/BG.png);
+    height: 800px;
+    /* background-repeat: repeat; ( lặp lại hình) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* cover: hình tự động đủ với ô div, có thể cut, phóng to */
+    background-position: center center;
+}
+
+.activty {
+    padding: 80px 0;
+}
+
+.activty .title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.activty .title h1 {
+    color: #8d8d8d;
+}
+
+.activty .main .row .col {
+    float: left;
+    width: 25%;
+    /* margin-right: 30px; dung padding de day noi dung vo*/
+    padding: 0 15px;
+    /* border: 1px solid #000000; */
+    box-sizing: border-box;
+}
+
+.activty .main .item {
+    background-color: white;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+}
+/* dặt position cho thẻ thumnail để duy chuyển trái tim */
+.activty .main .item .thumbnail{
+    position: relative;
+}
+
+.activty .main .item .thumbnail img {
+    width: 100%;
+    border-radius: 30px;
+}
+.activty .main .item i{
+    font-size: 20px;
+    color: red;
+    /* di chuyển incon relative, absolute, fixed*/
+    /* position: relative; vị trí icon k thay đổi khi phosngt o thu nhỏ
+    top: 100px; tren day xuong 100px
+    left: 100px; ben trai day qua
+    bottom: 50px ( uwu tieen top) */
+    /* position:absolute;( di chuyển theo thẻ cha bự ( body)) */
+/* => gọi thẻ cần đè hình có position: */
+position: absolute;
+top: 20px;
+right: 20px;
+background-color: rgba(255, 255, 255, 0.5);
+/* có thể sử dụng padding thay vì width và height nhưng trong trường hợp hình vuông thì đc, còn hình chữ nhật ohari dùng w và h */
+width: 45px;
+height: 45px;
+border-radius: 10px;
+/* cho line-height bằng chính height để đưa icon vào giữu */
+line-height: 45px;
+/* làm mờ màu */
+/* opacity: 0.5; */
+
+}
+
+.activty .main .item h1 {
+    font-size: 20px;
+}
+
+.activty .main .item p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.activty .main .item a {
+    background-color: gray;
+    padding: 10px 40px;
+    display:inline-block;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+}
